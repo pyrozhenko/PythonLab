@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.47, 0.5])
+y = np.array([1.82, 1.67, 1.49, 1.06, 0.57, 0.08, -0.33, -0.64, 0.22, 0.08])
+
+x1 = x.sum()/10
+x2 = sum(x**2)/10
+y1 = x.sum()/10
+yx = np.dot(x, y)/10
+ 
+ff = (yx - x1*y1)/(x2 - x1**2)
+f = y1 - ff*x1
+
+x_graph = np.array([-10 , 10])
+y_graph = np.array(f + ff*x_graph)
+
+
+plt.plot(x_graph , y_graph)
+plt.title("Pyrozhenko LB12")
+plt.xlabel('x')
+plt.xlabel('y')
+plt.grid()
+plt.show()
