@@ -1,0 +1,81 @@
+import numpy as np
+
+A = np.array([[1, 2], [4, -1]])
+B = np.array([[2, -3], [-4, 1]])
+C = A*B+B*A
+print(C)
+
+print('Task2')
+# 2
+a = np.array([[-1, 0, 2], [0, 1, 0], [1, 2, -1]])
+result = np.linalg.matrix_power(a, 2)
+print(result)
+
+
+print('Task3')
+# 3
+A = np.array([[3, 5], [2, 1]])
+B = np.array([[6, -1], [-3, 2]])
+C = A.dot(B)
+print(C)
+
+
+print('Task4')
+# 4
+A = np.matrix([[2, 3 ,4], [1, 0 ,6], [7, 8 ,9]])
+print(A)
+print(A.T)
+det_A = round(np.linalg.det(A), 3)
+det_A_t = round(np.linalg.det(A.T), 3)
+print(det_A)
+print(det_A_t)
+#5
+print('Task5')
+
+A = np.matrix([[1, 2, 3, 4], [-2, 1, -4, 3], [3, -4, 1, 2], [4, 3, -2, -1]])
+print(A)
+print(A.T)
+det_A = round(np.linalg.det(A), 3)
+det_A_t = round(np.linalg.det(A.T), 3)
+print(det_A)
+print(det_A_t)
+
+print('Task6')
+
+A = np.matrix('1 2 2 ; 2 1 -2; 2 -2 1')
+A_inv = np.linalg.inv(A)
+print(A_inv)
+
+#7
+print('Task7')
+
+A = np.matrix([ [1, 2, 3 ,4], [3 ,-1, 2 ,5], [1 ,2 ,3 ,4], [1 ,3 ,4 ,5] ])
+rank = np.linalg.matrix_rank(A)
+print(rank)
+
+#8
+print('Task8')
+A = np.matrix('14 4 6;,5 -3 2; 10 -11 5')
+B = np.matrix('30;15;36')
+A_det = np.linalg.det(A)
+
+X_m = np.matrix(A)
+X_m[:, 0] = B
+Y_m = np.matrix(A)
+Y_m[:, 1] = B
+Z_m = np.matrix(A)
+Y_m[:, 2] = B
+
+x = np.linalg.det(X_m) / A_det
+y = np.linalg.det(Y_m) / A_det
+z = np.linalg.det(Z_m) / A_det
+print(x)
+print(y)
+print(z)
+print(np.linalg.solve(A,B))
+#9
+print('Task9')
+A = np.array([[1, 2, -1], [3, 4, 1], [5, 1, -3]])
+B = np.array([-3,1,-2])
+X = np.linalg.solve(A,B)
+print(X)
