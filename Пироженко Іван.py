@@ -1,4 +1,4 @@
-"lab #14"
+"lab #14"1
 from numpy import *
 from math import *
 import matplotlib.pyplot as plt
